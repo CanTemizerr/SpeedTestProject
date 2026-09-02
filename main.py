@@ -1,19 +1,21 @@
 import os 
 from speed_test import SpeedTester
-from storage import Csv_save
-from analysis import Analysis1
+from storage import database
+from visualization import analysis
+
 speed=SpeedTester()
-save=Csv_save()
-analiz=Analysis1("speed_result.csv")
+save  = database()
+analysis = analysis()
+
 
 
 while True:
     try:
-       print("1:Hiz Testi Yap 2:Sonucu Kaydet 3:Analizler 4:Tüm sonuclari goruntule 5:Sonucları Sil 6:Cikis yap")
+       print("1:Hiz Testi Yap 2:Sonucu Kaydet 3:Sonuclari Sil 4:Cikis yap 5:İndirme hizi grafik")
        secilen_islem1=input("Seçim yapinziz")
        secilen_islem=int(secilen_islem1)
-       if secilen_islem <= 0 or secilen_islem > 6:
-           print("hatalı deger")
+       if secilen_islem <= 0 or secilen_islem > 5:
+           print("hatali deger")
            continue
     except Exception as e:
         print(f"hata {e}")
@@ -21,18 +23,27 @@ while True:
         sonuclar=speed.run_test()
         print(sonuclar)
     elif secilen_islem == 2:
-        if "sonuclar" in locals():
-            save.save_file(sonuclar)
+        try:
+            save.save_database(sonuclar)
+            print('Succesfull')
+        except Exception as e:
+            print('error' , e)
         else:
-            print("Önce hız testi yapın.")
+            print('Errorr')
+
+
     elif secilen_islem == 3:
-        analiz.analizyap()
+        try:
+            save.delete_db()
+            print('Results was deleted')
+        except Exception as e:
+            print('error')
+        
     elif secilen_islem == 4:
-        analiz.allresult()
-    elif secilen_islem == 5:
-        save.delete_allfile()
-    elif secilen_islem == 6:
         break
+    elif secilen_islem == 5:
+        analysis.show_download_graph()
+
     
 
 
