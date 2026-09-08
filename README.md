@@ -1,16 +1,20 @@
 #Basic Pyhton Speed Test Analyzer
-Speed test analyzer, internet hızını ölçen , sonuçları CSV dosyasına kaydeden ve istatistiksel analizler yapan bir python uygulamasıdır.
+Speed test analyzer, internet hızını ölçen , sonuçları sqllite kaydeden ve istatistiksel analizler yaparak sonuçları grafikleştiren bir uygulamadır.
 
 ## Özellikler
 -İnternet hız testi yapma
--Sonuçları csv dosyasına kaydetme 
+-Sonuçları sqllite kaydetme 
 -Geçmiş sonuçlara bakma ve silme
--Pandas ile veri analizi ve istatistik hesaplama
+-Pandas ile veri analizi ve grafikler ile görselleştirme
+-Otomatik hiz testi yapma
 
 ## Kullanılan Teknolojiler
 -Pandas
 -speedtest-cli
 -CSV OS modülleri
+-Seaborn
+-sqllite
+
 
 ## Kurulum
 1.Projeyi bilgisayarınıza klonlayın veya indirin:
