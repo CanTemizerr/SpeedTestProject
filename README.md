@@ -259,19 +259,6 @@ Projede özellikle aşağıdaki konuların pratik edilmesi hedeflenmiştir:
 
 ---
 
-## 🔮 Gelecekte Eklenebilecek Özellikler
-
-* 🌐 Flask / FastAPI ile web arayüzü
-* 📈 Daha gelişmiş istatistiksel analizler
-* 📄 PDF raporu oluşturma
-* 🤖 Yapay zekâ destekli internet performans analizi
-* 💡 İnternet bağlantısı için otomatik öneriler
-* 📍 Konuma göre hız analizi
-* 📧 E-posta ile otomatik rapor gönderme
-* 👤 Kullanıcı hesap sistemi
-* ☁️ Sonuçların bulut ortamında saklanması
-* 📱 Mobil uygulama
-* 🔔 İnternet hızının belirli bir seviyenin altına düşmesi durumunda bildirim
 
 ---
 
